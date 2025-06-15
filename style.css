@@ -1,0 +1,141 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: grey;
+}
+
+#menu {
+    background-color: #222;
+    padding: 10px;
+    text-align: center;
+}
+
+#menu a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.hover-box {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    
+}
+
+.hover-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+    display: block;
+}
+
+.hover-box .info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    text-align: left;
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.hover-box:hover img {
+    opacity: 0;
+}
+
+.hover-box:hover .info {
+    opacity: 1;
+}
+
+/* Custom background colors */
+.goku-bg {
+    background-color: lightblue;
+}
+
+.vegeta-bg {
+    background-color: blue;
+}
+
+.piccolo-bg {
+    background-color: #2e8b57;
+}
+
+.Freeza-bg{
+    background-color: palevioletred;
+}
+
+.Broly-bg{
+    background-color: lightgreen;
+}
+
+.Gohan-bg{
+    background-color: purple;
+}
+
+.Gotens-bg{
+    background-color: lightsalmon;
+}
+
+.hover-box .info p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.hover-box .info h2 {
+    margin-bottom: 10px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+    .hover-box {
+        width: 90%;
+        height: auto;
+    }
+}
+.character-page {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 0 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.character-page h2 {
+    text-align: center;
+}
+
+.character-img {
+    display: block;
+    max-width: 100%;
+    margin: 10px auto;
+    border-radius: 8px;
+}
